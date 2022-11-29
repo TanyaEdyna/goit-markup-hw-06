@@ -460,7 +460,7 @@
         </div>
         <div class="mailing">
           <p class="title-newsletter">Підпишіться на розсилку</p>
-          <form class="mail-form" action="">
+          <form class="mail-form" action="#">
             <ul class="mail-list">
               <li>
                 <input
@@ -491,6 +491,64 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <p class="modal-uptitle">Залиште свої дані, ми вам передзвонимо</p>
+        <form action="#">
+          <label class="modal-label" for="user-name">
+            Ім'я
+            <span class="modal-input-wrapper">
+              <input
+                class="modal-input"
+                type="text"
+                name="user-name"
+                id="user-name"
+              />
+              <svg class="modal-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-person-form"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label class="modal-label" for="">
+            Телефон
+            <span>
+              <input class="modal-input" type="tel" name="user-tel" />
+              <svg width="18" height="18">
+                <use href="./images/icons.svg#icon-phone-form"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label class="modal-label" for="">
+            Пошта
+            <span>
+              <input class="modal-input" type="email" name="user-mail" />
+              <svg width="18" height="18">
+                <use href="./images/icons.svg#icon-email-form"></use>
+              </svg>
+            </span>
+          </label>
+
+          <label class="modal-label" for="">
+            Коментар
+            <textarea
+              class="modal-message"
+              name="user-message"
+              id=""
+              placeholder="Введіть текст"
+            >
+            </textarea>
+          </label>
+
+          <label>
+            <span class="chekbox-text">Погоджуюся з розсилкою та приймаю</span>
+            <a class="chekbox-link" href="#">Умови договору</a>
+            <input type="chekbox" />
+            <svg width="14" height="14">
+              <use href="./images/icons.svg#icon-check"></use>
+            </svg>
+          </label>
+          <button class="modal-btn-submit" type="submit">Відправити</button>
+        </form>
       </div>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
