@@ -802,6 +802,8 @@ padding-top: 0;
    height: 120px;
    border: 1px solid rgba(33, 33, 33, 0.2);
    border-radius: 4px;
+   margin-bottom: 20px;
+   resize: none;
  }
 
  .modal-btn-submit {
@@ -846,9 +848,13 @@ padding-top: 0;
  .chekbox-wrapper {
    display: flex;
    justify-content: center;
+   align-items: center;
+   margin-bottom: 30px;
+  
  }
  .chekbox-icon {
    background-color: var(--accent-color);
+   margin-right: 7px;
  }
  /* ------visually-hidden ------*/
   .visually-hidden {
