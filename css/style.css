@@ -199,7 +199,6 @@ button {
  }
  .hero-button:hover,
  .hero-button:focus {
-   transform: translateY(5px) translateX(2px);
    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
    
    
@@ -214,18 +213,11 @@ button {
    padding-top: 94px;
    padding-bottom: 94px;
  }
- .visually-hidden {
-   position: absolute;
-   width: 1px;
-   height: 1px;
-   margin: -1px;
-   border: 0;
-   padding: 0;
-   white-space: nowrap;
-   clip-path: inset(100%);
-   clip: rect(0 0 0 0);
-   overflow: hidden;
- }
+
+
+
+
+
  .features-group-list {
    display: flex;
    justify-content: space-between;
@@ -755,6 +747,10 @@ padding-top: 0;
  .close-icon {
   fill: currentColor;
  }
+ .modal-form {
+  padding-left: 41px;
+
+ }
  .modal-uptitle {
    font-weight: 700;
    font-size: 20px;
@@ -765,25 +761,40 @@ padding-top: 0;
    padding: 40px 0 12px 0;
  }
  .modal-label {
-   display: flex;
+   display: block;
    font-weight: 400;
    font-size: 12px;
    line-height: 1.16;
    letter-spacing: 0.01em;
    color: var(--text-color);
+   margin-bottom: 4px;
  }
  .modal-input-wrapper {
    position: relative;
+   margin-bottom: 10px;
  }
  .modal-input {
    width: 448px;
    height: 40px;
    border: 1px solid rgba(33, 33, 33, 0.2);
    border-radius: 4px;
+   outline: transparent;
    padding-left: 12px;
  }
  .modal-icon {
    position: absolute;
+   left: 12px;
+   top: 50%;
+   transform: translateY(-50%);
+   margin-right: 12px;
+   
+ }
+ .modal-input:hover,
+ .modal-input:focus,
+ .modal-input:hover + .modal-icon,
+ .modal-input:focus + .modal-icon {
+   border-color: var(--accent-color);
+   fill: var(--accent-color);
  }
 
  .modal-message {
@@ -794,6 +805,8 @@ padding-top: 0;
  }
 
  .modal-btn-submit {
+   display: block;
+   margin: 0 auto;
    width: 200px;
    height: 50px;
    font-weight: 700;
@@ -813,6 +826,7 @@ padding-top: 0;
    line-height: 1.16;
    letter-spacing: 0.01em;
    color: rgba(117, 117, 117, 0.5);
+   padding: 12px 0 0 16px;
 }
  .chekbox-text {
    font-weight: 400;
@@ -829,3 +843,23 @@ padding-top: 0;
    text-decoration-line: underline;
    color: var(--accent-color);
  }
+ .chekbox-wrapper {
+   display: flex;
+   justify-content: center;
+ }
+ .chekbox-icon {
+   background-color: var(--accent-color);
+ }
+ /* ------visually-hidden ------*/
+  .visually-hidden {
+     position: absolute;
+     width: 1px;
+     height: 1px;
+     margin: -1px;
+     border: 0;
+     padding: 0;
+     white-space: nowrap;
+     clip-path: inset(100%);
+     clip: rect(0 0 0 0);
+     overflow: hidden;
+  }
