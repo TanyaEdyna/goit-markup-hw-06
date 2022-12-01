@@ -534,7 +534,55 @@ padding-top: 0;
    color: var(--white-color);
    margin-bottom: 20px; 
 }
-.mail-list {
+.subscribe-form {
+   display: flex;
+   gap: 12px;
+}
+.subscribe-label-text {
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 1.14;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
+   color: var(--white-color);
+   padding-bottom: 20px;
+}
+.subscribe-wrap {
+   display: flex;
+}
+.subscribe-input {
+   width: 358px;
+   height: 50px;
+   background-color: transparent;
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+   border-radius: 4px;
+   outline: transparent;
+   padding-left: 16px;
+   color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-input::placeholder {
+   font-size: 16px;
+   line-height: 1.25;
+   color: rgba(255, 255, 255, 0.6);
+   
+}
+.subscribe-button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 200px;
+   height: 50px;
+   background-color: var(--accent-color);
+   padding: 0;
+   border: none;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+   border-radius: 4px;
+   outline: transparent;
+   transition: transform 250ms var(--cubic);
+}
+/* .mail-list {
    display: flex;
    gap: 12px;
 }
@@ -566,7 +614,12 @@ padding-top: 0;
    border: none;
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
    border-radius: 4px;
+   outline: transparent;
+   transition: transform 250ms var(--cubic);
    
+}
+.mail-button:active {
+  transform: translateY(2px);
 }
 .mail-button-text {
    font-weight: 700;
@@ -578,7 +631,7 @@ padding-top: 0;
 }
 .mail-button-icon {
    fill: var(--white-color);
-}
+} */
 /* PORTFOLIO */
 
 .filter-list {
@@ -717,6 +770,7 @@ padding-top: 0;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 300ms var(--cubic);
+    padding: 40px;
 
  }
   .backdrop.is-hidden>.modal {
@@ -747,10 +801,7 @@ padding-top: 0;
  .close-icon {
   fill: currentColor;
  }
- .modal-form {
-  padding-left: 41px;
 
- }
  .modal-uptitle {
    font-weight: 700;
    font-size: 20px;
@@ -758,7 +809,7 @@ padding-top: 0;
    text-align: center;
    letter-spacing: 0.03em;
    color: var(--title-color);
-   padding: 40px 0 12px 0;
+   padding-bottom: 12px;
  }
  .modal-label {
    display: block;
@@ -779,7 +830,8 @@ padding-top: 0;
    border: 1px solid rgba(33, 33, 33, 0.2);
    border-radius: 4px;
    outline: transparent;
-   padding-left: 12px;
+   padding-left: 42px;
+   transition: border-color 250ms var(--cubic);
  }
  .modal-icon {
    position: absolute;
@@ -787,6 +839,7 @@ padding-top: 0;
    top: 50%;
    transform: translateY(-50%);
    margin-right: 12px;
+   
    
  }
  .modal-input:hover,
@@ -804,31 +857,22 @@ padding-top: 0;
    border-radius: 4px;
    margin-bottom: 20px;
    resize: none;
+   padding: 12px 0 0 16px;
+   outline: transparent;
+   transition: border-color 250ms var(--cubic);
+ }
+ .modal-message:hover {
+   border-color: var(--accent-color);
  }
 
- .modal-btn-submit {
-   display: block;
-   margin: 0 auto;
-   width: 200px;
-   height: 50px;
-   font-weight: 700;
-   font-size: 16px;
-   line-height: 1.87;
-   text-align: center;
-   letter-spacing: 0.06em;
-   color: var(--white-color);
-   background-color: var(--accent-color);
-   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-   border-radius: 4px;
-   border: none;
- }
+
 .modal-message::placeholder {
    font-weight: 400;
    font-size: 12px;
    line-height: 1.16;
    letter-spacing: 0.01em;
    color: rgba(117, 117, 117, 0.5);
-   padding: 12px 0 0 16px;
+   
 }
  .chekbox-text {
    font-weight: 400;
@@ -845,17 +889,43 @@ padding-top: 0;
    text-decoration-line: underline;
    color: var(--accent-color);
  }
- .chekbox-wrapper {
+ /* .chekbox-wrapper {
    display: flex;
    justify-content: center;
    align-items: center;
    margin-bottom: 30px;
   
- }
+ } */
  .chekbox-icon {
    background-color: var(--accent-color);
    margin-right: 7px;
  }
+  .modal-btn-submit {
+     display: block;
+     margin: 0 auto;
+     width: 200px;
+     height: 50px;
+     font-weight: 700;
+     font-size: 16px;
+     line-height: 1.87;
+     text-align: center;
+     letter-spacing: 0.06em;
+     color: var(--white-color);
+     background-color: var(--accent-color);
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+     border-radius: 4px;
+     border: none;
+     transition: drop-shadow 250ms var(--cubic), transform 250ms var(--cubic) ;
+  }
+
+  .modal-btn-submit:hover,
+  .modal-btn-submit:focus {
+     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+     
+  }
+  .modal-btn-submit:active {
+     transform: translateY(2px);
+  }
  /* ------visually-hidden ------*/
   .visually-hidden {
      position: absolute;
