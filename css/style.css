@@ -538,7 +538,7 @@ padding-top: 0;
    display: flex;
    gap: 12px;
 }
-.subscribe-label-text {
+.subscribe-uptitle {
    font-weight: 700;
    font-size: 14px;
    line-height: 1.14;
@@ -547,8 +547,11 @@ padding-top: 0;
    color: var(--white-color);
    padding-bottom: 20px;
 }
-.subscribe-wrap {
+/* .subscribe-wrap {
    display: flex;
+} */
+.subscribe-label {
+   display: block;
 }
 .subscribe-input {
    width: 358px;
@@ -839,6 +842,7 @@ padding-top: 0;
    top: 50%;
    transform: translateY(-50%);
    margin-right: 12px;
+   transition: fill 250ms var(--cubic);
    
    
  }
@@ -874,14 +878,49 @@ padding-top: 0;
    color: rgba(117, 117, 117, 0.5);
    
 }
- .chekbox-text {
+.custom-icon {
+   width: 16px;
+   height: 15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: 2px solid var(--title-color);
+   border-radius: 2px;
+   outline: transparent;
+   margin-right: 7px;
+
+}
+.checkbox-label {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 30px;
+}
+.checkbox-input:checked + .custom-icon{
+   border: none;
+   border-color: var(--accent-color);
+   background-color: var(--accent-color);
+   color: var(--white-color);
+   fill: currentColor;
+}
+
+.checkbox-input {
+   position: absolute;
+   -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      /* або через .visually-hidden */
+}
+ .checkbox-text {
+   text-align: center;
    font-weight: 400;
    font-size: 14px;
-   line-height: 2;
+   line-height: 2;   
    letter-spacing: 0.03em;
    color: var(--text-color);
+   margin-right: 4px;
  }
- .chekbox-link {
+ .text-link {
    font-weight: 400;
    font-size: 14px;
    line-height: 2;
@@ -889,13 +928,7 @@ padding-top: 0;
    text-decoration-line: underline;
    color: var(--accent-color);
  }
- /* .chekbox-wrapper {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-bottom: 30px;
-  
- } */
+
  .chekbox-icon {
    background-color: var(--accent-color);
    margin-right: 7px;
