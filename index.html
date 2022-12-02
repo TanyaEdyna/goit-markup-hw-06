@@ -472,40 +472,19 @@
               <button
                 class="subscribe-button"
                 type="submit"
-                form="subscribe-form"
+               
               >
                 Підписатися
-                <svg class="subscribe-icon-link" width="24" height="24">
+                <svg class="subscribe-icon" width="24" height="24">
                   <use
-                    href="./images/icons/icons-webstudio.svg#icon-send"
+                    href="./images/icons.svg#icon-send"
                   ></use>
                 </svg>
               </button>
             </div>
           </form>
         </div>
-      <!-- <div class="subscribe">
-          <p class="subscribe-label-text">Підпишіться на розсилку</p>
-          <form class="subscribe-form" action="#">
-                <input
-                  class="subscribe-input"
-                  type="email"
-                  name="email"
-                  placeholder="E-mail"
-            required
-                  aria-label="Email"
-                />
-           
-              <button
-                class="subscribe-button btn">
-                Підписатися
-                <svg class="subscribe-icon-link" width="24" height="24">
-                  <use href="./images/icons/icons-webstudio.svg#icon-send"></use>
-                </svg>
-              </button>
-            </form>
-            </div> -->
-            <!-- --------- -->
+     
         <!-- <ul class="mail-list">
               <li>
                 <input
@@ -543,6 +522,7 @@
               type="text"
               name="user-name"
               id="user-name"
+              required
             />
             <svg class="modal-icon" width="18" height="18">
               <use href="./images/icons.svg#icon-person-form"></use>
@@ -556,6 +536,7 @@
               type="tel"
               name="user-tel"
               id="user-phone"
+              required
             />
             <svg class="modal-icon" width="18" height="18">
               <use href="./images/icons.svg#icon-phone-form"></use>
@@ -569,6 +550,7 @@
               type="email"
               name="user-mail"
               id="user-mail"
+              required
             />
             <svg class="modal-icon" width="18" height="18">
               <use href="./images/icons.svg#icon-email-form"></use>
@@ -581,12 +563,13 @@
             name="user-message"
             id="user-message"
             placeholder="Введіть текст"
+            required
           ></textarea>
 
           <div class="checkbox-wrapper">
             <label class="checkbox-label">
               <input
-                class="checkbox-input"
+                class="checkbox-input visually-hidden"
                 type="checkbox"
                 name="user-check"
                 required
